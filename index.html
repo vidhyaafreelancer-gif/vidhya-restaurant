@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ragunath Restaurant</title>
+    <link rel="stylesheet" href="src/css/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <h1>Ragunath Restaurant</h1>
+        <p>
+          Enjoy a taste of heaven. A restaurant where magic happens.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel" id="menu-panel">
+        <div id="menu-grid" class="menu-grid"></div>
+      </section>
+
+      <section class="panel" id="cart-panel">
+        <div id="cart-items" class="cart-items empty">
+          <p>No dishes yet. Tap a dish to start a bill.</p>
+        </div>
+        <div class="cart-meta">
+          <div class="cart-total">
+            <p>Total</p>
+            <strong id="cart-total">₹0</strong>
+          </div>
+        </div>
+        <div class="cart-actions">
+          <button id="clear-cart" class="ghost">Clear cart</button>
+          <button id="generate-invoice" class="primary">Generate Invoice</button>
+          <button id="pay-now" class="primary">Pay Now</button>
+        </div>
+      </section>
+
+      <section class="panel" id="pay-panel">
+        <div id="pay-card" class="pay-card hidden">
+          <h2>Scan to Pay</h2>
+          <p>Use any UPI / QR scanner app to pay Ragunath Restaurant.</p>
+          <img
+            id="pay-qr"
+            class="pay-qr"
+            alt="QR code to pay Ragunath Restaurant"
+            src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=RAGUNATH_RESTAURANT_PAYMENT"
+          />
+        </div>
+      </section>
+    </main>
+
+    <template id="menu-card-template">
+      <article class="menu-card">
+        <img alt="" class="menu-card-image" />
+        <div class="menu-card-body">
+          <div>
+            <h3 class="menu-card-title"></h3>
+          </div>
+          <div class="menu-card-footer">
+            <span class="price"></span>
+            <button class="small primary add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="src/js/app.js" defer></script>
+  </body>
+</html>
+
