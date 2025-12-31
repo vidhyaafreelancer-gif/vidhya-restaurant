@@ -27,13 +27,6 @@ const defaultMenu = [
     image:
       "https://images.pexels.com/photos/21751212/pexels-photo-21751212.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
-  {
-    id: "poori",
-    name: "Poori",
-    price: 30,
-    image:
-      "https://images.pexels.com/photos/20422124/pexels-photo-20422124.jpeg?auto=compress&cs=tinysrgb&w=600",
-  },
 ];
 
 const template = document.getElementById("menu-card-template");
